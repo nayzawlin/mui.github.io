@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AppBar from './views/appbar/appbar';
+import Home from './views/home/home'
+import { Container } from '@mui/material';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<header className="">
+				<AppBar />
+			</header>
+			<main style={{ padding: "1rem" }}>
+				<Container fixed maxWidth="xl">
+					<BrowserRouter>
+						<Routes>
+							<Route path="/" element={<Home />} />
+						</Routes>
+					</BrowserRouter>
+				</Container>
+			</main>
+		</div>
+	);
 }
 
 export default App;
