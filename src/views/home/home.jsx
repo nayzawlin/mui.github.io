@@ -24,17 +24,17 @@ export default function Home() {
 	const [url, setURL] = useState('')
 	const poster = useSelector(state => state.post)
 
-	const ADD = () =>{
+	const ADD_POSTER = () =>{
 		dispatch(add(url));
 		setURL('');
 	}
 
 	return (<>
 
-		<Grid container mt={1}>
-			<TextField id="standard-basic" label="Enter POSTER URL" variant="standard" value={url} onChange={(i)=>setURL(i.target.value)}/>
-			<Button variant="contained" sx={btn} onClick={ADD}>ADD</Button>
-		</Grid>
+		<Stack direction="row" spacing={2}>
+			<TextField id="standard-basic" label="ENTER POSTER URL" variant="standard" value={url} onChange={(i) => setURL(i.target.value)} />
+			<Button variant="contained" sx={btn} onClick={ADD_POSTER}>ADD POSTER</Button>
+		</Stack>
 
 		<Grid container spacing={1} mt={3}>
 			{

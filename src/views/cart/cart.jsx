@@ -12,9 +12,10 @@ export default function Cart() {
 
 	useEffect(() => {
 		if(cart.length === 0){
+			alert('Empty Cart! This page will be back to Home page automatically')
 			navigate('/'); 
 		}
-	}, []);
+	}, [cart]);
 
 	return (<>
 
@@ -22,7 +23,7 @@ export default function Cart() {
 			{
 				cart.map((i, index) => {
 					return (
-						<List key={index} url={i.url} id={i.id} />
+						<List key={index} url={i.url} id={i.id} status="cart" />
 					)
 				})
 			}
