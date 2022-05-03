@@ -18,7 +18,7 @@ const btn = {
 	marginLeft: 2
 }
 
-export default function RecipeReviewCard() {
+export default function Home() {
 	
 	const dispatch = useDispatch();
 	const [url, setURL] = useState('')
@@ -40,7 +40,7 @@ export default function RecipeReviewCard() {
 			{
 				poster.map((i, index) => {
 					return(
-						<List key={index} image={i.url} id={i.id} />
+						<List key={index} url={i.url} id={i.id} />
 					)
 				})
 			}

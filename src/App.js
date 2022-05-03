@@ -1,8 +1,10 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppBar from './views/appbar/appbar';
-import Home from './views/home/home'
+import Home from './views/home/home';
 import { Container } from '@mui/material';
+import Cart from './views/cart/cart';
+
 
 function App() {
 	return (
@@ -12,11 +14,10 @@ function App() {
 			</header>
 			<main style={{ padding: "1rem", background: '' }}> {/* background: '#f7f7f7' */}
 				<Container fixed maxWidth="xl">
-					<BrowserRouter>
-						<Routes>
-							<Route path="/" element={<Home />} />
-						</Routes>
-					</BrowserRouter>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/cart" element={<Cart />} />
+					</Routes>
 				</Container>
 			</main>
 		</div>

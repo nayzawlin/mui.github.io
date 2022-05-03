@@ -15,11 +15,12 @@ import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 
 
 
-export default function BackToTop(props) {
-
+export default function NaviBar(props) {
+	
 	const cart = useSelector(state => state.cart)
 
 	const style = {
@@ -27,12 +28,12 @@ export default function BackToTop(props) {
 	}
 
 	const StyledBadge = styled(Badge)(({ theme }) => ({
-	'& .MuiBadge-badge': {
-	right: -3,
-	top: 13,
-	border: `2px solid ${theme.palette.background.paper}`,
-	padding: '0 4px',
-	},
+		'& .MuiBadge-badge': {
+			right: -3,
+			top: 13,
+			border: `2px solid ${theme.palette.background.paper}`,
+			padding: '0 4px',
+		},
 	}));
 
 	return (
@@ -47,11 +48,13 @@ export default function BackToTop(props) {
 					{/* <Button color="inherit">
 						<Cart />
 					</Button> */}
-					<IconButton>
-						<StyledBadge badgeContent={cart.length} color="secondary">
-							<Cart />
-						</StyledBadge>
-					</IconButton>
+					<Link to={'/cart'}>
+						<IconButton>
+							<StyledBadge badgeContent={cart.length} color="secondary">
+								<Cart />
+							</StyledBadge>
+						</IconButton>
+					</Link>
 				</Toolbar>
 			</AppBar>
 

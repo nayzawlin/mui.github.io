@@ -11,10 +11,11 @@ import { addToCart } from '../../features/cartSlice';
 export const List = (props) => { 
 
 	const dispatch = useDispatch();
-	const list = useSelector(state => state.post)
+	const post = useSelector(state => state.post)
+	const cart = useSelector(state => state.cart)
 
-	const ADD_TO_CART = (id) => {
-		dispatch(addToCart({ id, list}))
+	const ADD_TO_CART = (d) => {
+		dispatch(addToCart({ current: props, post, cart }))
 	}
 
 	return(
@@ -23,11 +24,11 @@ export const List = (props) => {
 				<CardMedia
 					component="img"
 					height={270}
-					image={props.image}
+					image={props.url}
 					alt="Paella dish"
 				/>
 				<CardActions>
-					<Button size="small" sx={{ mx: 'auto' }} variant="contained" onClick={() => ADD_TO_CART(props.id)}>
+					<Button size="small" sx={{ mx: 'auto' }} variant="contained" onClick={() => ADD_TO_CART(props)}>
 						ADD TO CART
 					</Button>
 				</CardActions>

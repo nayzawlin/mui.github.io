@@ -7,9 +7,12 @@ const cartSlice = createSlice({
 	initialState,
 	reducers: {
 		addToCart: (state, action) => {
-			const { id, list } = action.payload;
-			let obj = list.find(i => i.id === id);
-			state.push(obj);
+			const { current, cart } = action.payload;
+
+			let obj = cart.find(i => i.id === current.id);
+			console.log('obj', obj);
+			console.log('current', current);
+			obj ? alert('This poster is already added') : state.push(current);
 		}
 	}
 })
