@@ -1,4 +1,4 @@
-export const image = [
+export const poster = [
 	{
 		id: 1,
 		url: "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/avengers-infinity-war_89e0d364_240x360_crop_center.progressive.jpg?v=1631200474"
