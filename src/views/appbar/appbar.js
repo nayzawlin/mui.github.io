@@ -14,7 +14,7 @@ import Cart from '@mui/icons-material/ShoppingCart';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 
 
@@ -40,14 +40,23 @@ export default function NaviBar(props) {
 		<React.Fragment>
 
 			<CssBaseline />
+
 			<AppBar color="inherit" sx={style}>
 				<Toolbar>
-					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-					MOVIESDB
-					</Typography>
-					{/* <Button color="inherit">
-						<Cart />
-					</Button> */}
+					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>MOVIESDB</Typography>
+					
+					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+						<Button sx={{ mx: 1, color: 'inherit' }}>
+							Home
+						</Button>
+						<Button sx={{ mx: 1, color: 'inherit' }} >
+							Products
+						</Button>
+						<Button sx={{ mx: 1, color: 'inherit' }} >
+							Category
+						</Button>
+					</Box>
+
 					<Link to={'/cart'}>
 						<IconButton>
 							<StyledBadge badgeContent={cart.length} color="secondary">
@@ -55,6 +64,8 @@ export default function NaviBar(props) {
 							</StyledBadge>
 						</IconButton>
 					</Link>
+
+					
 				</Toolbar>
 			</AppBar>
 
