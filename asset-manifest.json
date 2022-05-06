@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nayzawlin/mui.github.io/static/css/main.8df472f1.css",
+    "main.js": "/nayzawlin/mui.github.io/static/js/main.1f051774.js",
+    "static/js/787.c167ee72.chunk.js": "/nayzawlin/mui.github.io/static/js/787.c167ee72.chunk.js",
+    "index.html": "/nayzawlin/mui.github.io/index.html",
+    "main.8df472f1.css.map": "/nayzawlin/mui.github.io/static/css/main.8df472f1.css.map",
+    "main.1f051774.js.map": "/nayzawlin/mui.github.io/static/js/main.1f051774.js.map",
+    "787.c167ee72.chunk.js.map": "/nayzawlin/mui.github.io/static/js/787.c167ee72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8df472f1.css",
+    "static/js/main.1f051774.js"
+  ]
+}
